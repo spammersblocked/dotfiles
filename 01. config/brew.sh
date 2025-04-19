@@ -23,6 +23,12 @@ brew install --cask iterm2
 brew install --cask rectangle
 brew install --cask visual-studio-code
 
+# install powerlevel10k theme
+brew install romkatv/powerlevel10k/powerlevel10k
+echo 'source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+sed -i '' 's/^ZSH_THEME=".*"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
+source ~/.zshrc
+
 # mas install
 # "WhatsApp" = 310633997;
 mas install 310633997
