@@ -1,0 +1,21 @@
+# install nix
+sh <(curl -L https://nixos.org/nix/install)
+
+# test neofetch
+nix-shell -p neofetch --run neofetch
+
+# create custom directory
+mkdir nix && cd nix  
+
+# initialize nix flake
+nix flake init -t nix-darwin --extra-experimental-features "nix-command flakes"
+
+# setup  nix-darwin
+nix nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/nix#air
+
+# update nix (includess home brew/system settings etc)
+darwin-rebuild switch --flake ~/nix#air
+
+# search apps
+mix search nixpkgs “app-name”
+mas search “app-name”
