@@ -1,3 +1,4 @@
+# delete .DS_Store
 find ~/Downloads ~/Documents ~/Desktop /Library -name ".DS_Store" -delete
 
 # show Library folder
