@@ -11,7 +11,7 @@ mkdir nix && cd nix
 nix flake init -t nix-darwin --extra-experimental-features "nix-command flakes"
 
 # setup  nix-darwin
-nix nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/nix#air
+nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/nix#air
 
 # update nix (includes home brew/system settings etc)
 darwin-rebuild switch --flake ~/nix#air
