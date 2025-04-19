@@ -17,5 +17,5 @@ nix nix run nix-darwin --extra-experimental-features "nix-command flakes" -- swi
 darwin-rebuild switch --flake ~/nix#air
 
 # search apps
-mix search nixpkgs “app-name”
-mas search “app-name”
+mix search nixpkgs "app-name"
+mas search "app-name"
