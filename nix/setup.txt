@@ -10,7 +10,7 @@ mkdir nix && cd nix
 # initialize nix flake
 nix flake init -t nix-darwin --extra-experimental-features "nix-command flakes"
 
-# setup  nix-darwin
+# setup nix-darwin
 nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/nix#air
 
 # update nix (includes home brew/system settings etc)
